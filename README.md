@@ -1,12 +1,18 @@
+## Few infos
+- users can login using email or username & password.
+- phone field is defaulted to Japan unless full specified country code used.
+- users can not used disposable email addresses. 
+- password has to be 8 characters minimum. 
+
 ## Routes
 
 -   Global routes
-    -   /register | type: POST [ For user registration]
-    -   /login | type: POST [ For user login]
+    -   *register* | type: POST [ For user registration]
+    -   *login* | type: POST [ For user login]
 -   Protected routes
-    -   /me | type: GET [ For user info]
-    -   /update | type: PATCH [ For user account update]
-    -   /logout | type: GET [ For user logout]
+    -   *me* | type: GET [ For user info]
+    -   *update* | type: PATCH [ For user account update]
+    -   *logout* | type: GET [ For user logout]
 
 ## Packages used
 
