@@ -63,8 +63,8 @@ class ApiAuthController extends Controller
     public function update(ApiUpdateUserRequest $request)
     {
         // get the validated data, hash the password and create the user
-        $user = $request->user()->update(array_merge($request->validated(), ['password' => Hash::make($request->password)]));
-        
+        $user = $request->user()->update($request->validated());
+
         //user update status.
         return $user == true ?
             $this->successResponse('User updated successfully.', 200) : $this->errorResponse('There was a problem updating the user.', 500);

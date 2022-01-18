@@ -27,7 +27,7 @@ class ApiUpdateUserRequest extends FormRequest
             'username' => ['required', 'alpha_dash', 'max:255', 'unique:users,username,' . $this->user()->id],
             'email' => ['required', 'string', 'max:255', 'unique:users,email,' . $this->user()->id, 'email', 'indisposable'],
             'phone' => ['required', 'phone:AUTO,JP',],
-            'password' => ['required', 'alpha_num', 'confirmed', 'string', 'min:8'],
+            // 'password' => ['required', 'alpha_num', 'confirmed', 'string', 'min:8'],
         ];
     }
 }
